@@ -9,7 +9,7 @@
     body {
       margin: 0;
       font-family: 'Comic Sans MS', cursive, sans-serif;
-      background: linear-gradient(135deg, #ff5f9e, #ffc371);
+
       height: 100vh;
       display: flex;
       justify-content: center;
@@ -141,16 +141,18 @@
     });
 
     function startHearts() {
-      setInterval(() => {
-        const heart = document.createElement("div");
-        heart.className = "heart";
-        heart.textContent = "💖";
-        heart.style.left = Math.random() * 100 + "vw";
-        heart.style.animationDuration = 2 + Math.random() * 3 + "s";
-        heartsContainer.appendChild(heart);
+        const hearts = ["❤️", "🧡", "💛", "💚", "💙", "💜"];
+        setInterval(() => {
+            const heart = document.createElement("div");
+            heart.className = "heart";
+            heart.textContent = hearts[Math.floor(Math.random() * hearts.length)];
+            heart.style.left = Math.random() * 100 + "vw";
+            heart.style.animationDuration = 2 + Math.random() * 3 + "s";
 
-        setTimeout(() => heart.remove(), 5000);
-      }, 300);
+            heartsContainer.appendChild(heart);
+
+            setTimeout(() => heart.remove(), 5000);
+        }, 300);
     }
   </script>
 
