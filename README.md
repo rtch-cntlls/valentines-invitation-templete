@@ -6,7 +6,6 @@ Click **YES ❤️** or **NO 😢** and see how the game reacts. Hearts float on
 
 ---
 
-## 🎮 How to Play
 
 1. Open `index.html` in your browser.
 2. Read the question:  
